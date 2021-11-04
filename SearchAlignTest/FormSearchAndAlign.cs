@@ -78,7 +78,7 @@ namespace SearchAlignTest {
         }
         private void bt_AlignSetting_Click(object sender, EventArgs e) {
             try {
-                var f = new Abeo.Controls.Common.FormObjectEditor(_finder);
+                var f = new Abeo.Controls.Common.FormObjectEditor(_aligner);
                 f.ShowDialog();
             } catch(Exception ex) { LotusAPI.Logger.Error(ex.Message); }
         }
