@@ -41,6 +41,11 @@ namespace SearchAlignTest {
         private void bt_LoadModel_Click(object sender, EventArgs e) {
             try {
                 _model = new Pointcloud(DialogUtils.OpenPLYFile("Load model file"));
+                if (_model == null)
+                {
+                    DialogUtils.ShowInfoMsg("모델을 선택하지 않으셨습니다.");
+                    return;
+                }
                 _pcv.Add(_model, Color.Yellow);
                 _pcv.Render();
                 Train();
@@ -49,6 +54,11 @@ namespace SearchAlignTest {
         private void bt_LoadScene_Click(object sender, EventArgs e) {
             try {
                 _scene = new Pointcloud(DialogUtils.OpenPLYFile("Load scene file"));
+                if (_scene == null)
+                {
+                    DialogUtils.ShowInfoMsg("씬을 선택하지 않으셨습니다.");
+                    return;
+                }
                 _pcv.Add(_scene, Color.Gray);
                 _pcv.Render();
             } catch(Exception ex) { LotusAPI.Logger.Error(ex.Message); }

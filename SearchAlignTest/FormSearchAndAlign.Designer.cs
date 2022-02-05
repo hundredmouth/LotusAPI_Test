@@ -26,14 +26,14 @@ namespace SearchAlignTest {
         private void InitializeComponent() {
             this.pcv = new LotusAPI.Controls.PointcloudView();
             this.flatPanel1 = new Abeo.Controls.FlatPanel();
+            this.flatButton4 = new Abeo.Controls.FlatButton();
+            this.flatButton3 = new Abeo.Controls.FlatButton();
             this.flatButton2 = new Abeo.Controls.FlatButton();
             this.flatButton1 = new Abeo.Controls.FlatButton();
             this.bt_Load_Scan = new Abeo.Controls.FlatButton();
             this.bt_Load_Model = new Abeo.Controls.FlatButton();
             this.lv = new LotusAPI.Controls.LogView();
             this.flatPanel2 = new Abeo.Controls.FlatPanel();
-            this.flatButton3 = new Abeo.Controls.FlatButton();
-            this.flatButton4 = new Abeo.Controls.FlatButton();
             this.flatPanel3 = new Abeo.Controls.FlatPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pcv)).BeginInit();
             this.flatPanel1.SuspendLayout();
@@ -58,9 +58,9 @@ namespace SearchAlignTest {
             // flatPanel1
             // 
             this.flatPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(232)))), ((int)(((byte)(213)))));
-            this.flatPanel1.Controls.Add(this.flatButton4);
-            this.flatPanel1.Controls.Add(this.flatButton3);
             this.flatPanel1.Controls.Add(this.flatButton2);
+            this.flatPanel1.Controls.Add(this.flatButton3);
+            this.flatPanel1.Controls.Add(this.flatButton4);
             this.flatPanel1.Controls.Add(this.flatButton1);
             this.flatPanel1.Controls.Add(this.bt_Load_Scan);
             this.flatPanel1.Controls.Add(this.bt_Load_Model);
@@ -73,26 +73,72 @@ namespace SearchAlignTest {
             this.flatPanel1.Size = new System.Drawing.Size(1151, 49);
             this.flatPanel1.TabIndex = 3;
             // 
+            // flatButton4
+            // 
+            this.flatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.flatButton4.BorderColor = System.Drawing.Color.White;
+            this.flatButton4.BorderSize = 1;
+            this.flatButton4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flatButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.flatButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.flatButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.flatButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.flatButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
+            this.flatButton4.Location = new System.Drawing.Point(996, 1);
+            this.flatButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton4.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.flatButton4.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.flatButton4.Name = "flatButton4";
+            this.flatButton4.Size = new System.Drawing.Size(154, 47);
+            this.flatButton4.TabIndex = 23;
+            this.flatButton4.Text = "화면 지우기";
+            this.flatButton4.UseVisualStyleBackColor = false;
+            this.flatButton4.Click += new System.EventHandler(this.bt_ClearDisplay_Click);
+            // 
+            // flatButton3
+            // 
+            this.flatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.flatButton3.BorderColor = System.Drawing.Color.White;
+            this.flatButton3.BorderSize = 1;
+            this.flatButton3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flatButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.flatButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.flatButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.flatButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.flatButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
+            this.flatButton3.Location = new System.Drawing.Point(878, 1);
+            this.flatButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton3.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.flatButton3.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.flatButton3.Name = "flatButton3";
+            this.flatButton3.Size = new System.Drawing.Size(118, 47);
+            this.flatButton3.TabIndex = 22;
+            this.flatButton3.Text = "ICP설정";
+            this.flatButton3.UseVisualStyleBackColor = false;
+            this.flatButton3.Click += new System.EventHandler(this.bt_AlignSetting_Click);
+            // 
             // flatButton2
             // 
             this.flatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.flatButton2.BorderColor = System.Drawing.Color.White;
             this.flatButton2.BorderSize = 1;
-            this.flatButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flatButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.flatButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.flatButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
             this.flatButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
             this.flatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flatButton2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.flatButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
-            this.flatButton2.Location = new System.Drawing.Point(440, 1);
+            this.flatButton2.Location = new System.Drawing.Point(724, 1);
             this.flatButton2.Margin = new System.Windows.Forms.Padding(0);
             this.flatButton2.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
             this.flatButton2.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
             this.flatButton2.Name = "flatButton2";
             this.flatButton2.Size = new System.Drawing.Size(154, 47);
             this.flatButton2.TabIndex = 21;
-            this.flatButton2.Text = "4. 3D패턴설정";
+            this.flatButton2.Text = "3D패턴설정";
             this.flatButton2.UseVisualStyleBackColor = false;
             this.flatButton2.Click += new System.EventHandler(this.bt_SearchSetting_Click);
             // 
@@ -202,52 +248,6 @@ namespace SearchAlignTest {
             this.flatPanel2.Padding = new System.Windows.Forms.Padding(1);
             this.flatPanel2.Size = new System.Drawing.Size(1151, 220);
             this.flatPanel2.TabIndex = 6;
-            // 
-            // flatButton3
-            // 
-            this.flatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.flatButton3.BorderColor = System.Drawing.Color.White;
-            this.flatButton3.BorderSize = 1;
-            this.flatButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flatButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.flatButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.flatButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.flatButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flatButton3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.flatButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
-            this.flatButton3.Location = new System.Drawing.Point(594, 1);
-            this.flatButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.flatButton3.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.flatButton3.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.flatButton3.Name = "flatButton3";
-            this.flatButton3.Size = new System.Drawing.Size(154, 47);
-            this.flatButton3.TabIndex = 22;
-            this.flatButton3.Text = "5. ICP설정";
-            this.flatButton3.UseVisualStyleBackColor = false;
-            this.flatButton3.Click += new System.EventHandler(this.bt_AlignSetting_Click);
-            // 
-            // flatButton4
-            // 
-            this.flatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.flatButton4.BorderColor = System.Drawing.Color.White;
-            this.flatButton4.BorderSize = 1;
-            this.flatButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flatButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.flatButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.flatButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.flatButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flatButton4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.flatButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
-            this.flatButton4.Location = new System.Drawing.Point(996, 1);
-            this.flatButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.flatButton4.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.flatButton4.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.flatButton4.Name = "flatButton4";
-            this.flatButton4.Size = new System.Drawing.Size(154, 47);
-            this.flatButton4.TabIndex = 23;
-            this.flatButton4.Text = "화면 지우기";
-            this.flatButton4.UseVisualStyleBackColor = false;
-            this.flatButton4.Click += new System.EventHandler(this.bt_ClearDisplay_Click);
             // 
             // flatPanel3
             // 
